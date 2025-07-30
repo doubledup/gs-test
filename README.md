@@ -1,3 +1,3 @@
 # git-spice test
 
-A small repo for testing git-spice
+A small repo for testing git-spice.
