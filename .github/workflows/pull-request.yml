@@ -1,0 +1,15 @@
+on:
+  pull_request:
+    types:
+      - opened
+      - synchronize
+
+jobs:
+  print-names:
+    strategy:
+      matrix:
+        names: ["Alice", "Bob", "Charlie"]
+    uses: ./.github/workflows/_print-name.yml
+    with:
+      name: ${{ matrix.names }}
+    secrets: inherit
